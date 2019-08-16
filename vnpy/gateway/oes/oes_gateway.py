@@ -3,16 +3,16 @@ Author: nanoric
 """
 import hashlib
 import os
-from gettext import gettext as _
 from threading import Lock, Thread
 
 from vnpy.trader.gateway import BaseGateway
 from vnpy.trader.object import (CancelRequest, OrderRequest,
                                 SubscribeRequest)
-from vnpy.trader.utility import get_file_path
+from vnpy.utility.path import get_file_path
 from .oes_md import OesMdApi
 from .oes_td import OesTdApi, EXCHANGE_VT2OES
 from .utils import config_template
+from vnpy.trader.translation import gettext as _
 
 
 class OesGateway(BaseGateway):
